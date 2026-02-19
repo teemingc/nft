@@ -1172,7 +1172,7 @@ export default async function analyze(
     // do not emit assets outside the package boundary if inside node_modules
     if (pkgBase) {
       const nodeModulesBase =
-        id.substring(0, id.lastIndexOf(path.sep + 'node_modules')) +
+        id.substring(0, id.indexOf(path.sep + 'node_modules')) +
         path.sep +
         'node_modules' +
         path.sep;
