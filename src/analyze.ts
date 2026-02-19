@@ -1223,7 +1223,7 @@ export default async function analyze(
     // do not emit asset directories higher than the node_modules base if a package
     if (pkgBase) {
       const nodeModulesBase =
-        id.substring(0, id.lastIndexOf(path.sep + 'node_modules')) +
+        id.substring(0, id.indexOf(path.sep + 'node_modules')) +
         path.sep +
         'node_modules' +
         path.sep;
